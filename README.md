@@ -1,4 +1,4 @@
-# RDS Secret
+# terraform-rds-cf-secret
 
 Rotate db instance password with Terraform and CloudFormation.
 
