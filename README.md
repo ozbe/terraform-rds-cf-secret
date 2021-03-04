@@ -11,6 +11,8 @@ My current thinking is you can't update the existing rds instance username and p
 the RDS instance resource into stack. You could make the cluster outside stack and manage the instance 
 and secret in CloudFormation, but, :shrug:, that wasn't the goal of getting the db instance managed by Terraform.
 
+Even with the attachment working, I wouldn't be surprised if the password would be a problem on subsequent Terraform deploys. Possibly the key could be rotated to mitigate this reapplication, but rotating on deploy because of a technical limitation and not a choice seems like a smell.
+
 ## Setup
 ```
 $ terraform init
